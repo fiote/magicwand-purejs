@@ -11,3 +11,7 @@ Reading the image pixels and checking if positions are similar enough was the ea
 ### Technologies
 
 Nothing fancy, just HTML5 canvas and typescript. All the code/logic (except for the <a target='_blank' href='https://github.com/antimatter15/rgb-lab'>comparing rgb</a> bit) was developed over the last few hours specifically for this test.
+
+# See it Working
+
+https://rawcdn.githack.com/fiote/magicwand/master/index.html
