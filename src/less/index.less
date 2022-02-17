@@ -1,0 +1,54 @@
+body {
+	font-family: "Roboto";
+}
+
+.hidden {
+	display: none;
+}
+
+.block {
+	border: 1px solid rgba(0, 0, 0, 10%);
+	background: #fafafa;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 20px;
+}
+
+#control {
+	.control {
+		label {
+			display: block;
+			font-weight: 800;
+		}
+		.slider {
+			display: grid;
+    		grid-template-columns: auto 50px;
+			column-gap: 20px;
+
+			input {
+				padding: 5px 0px;
+				width: 100%;
+				box-sizing: border-box;
+			}
+
+			span {
+				align-self: center;
+				font-size: 16px;
+				position: relative;
+				top: -2px;
+				margin-left: 5px;
+				text-align: right;
+			}
+		}
+	}
+}
+
+.intro {
+	padding: 10px 50px;
+}
+
+#content {
+	.help {
+		padding-bottom: 20px;
+	}
+}

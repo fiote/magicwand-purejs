@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Magic Wand</title>
+
+    <script src="dist/js/index.js"></script>
+	<link rel="stylesheet" href="dist/css/index.css" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto" />
+</head>
+<body>
+	<h1>Proof of Concept : "Magic Wand"</h1>
+
+	<div class='intro'>
+		<b>Description:</b>
+		A tool that analyzes your selected image pixel by pixel then calculates the area around the clicked position based on its color and the tolerance selected.
+	</div>
+
+	<div class='intro'>
+		<b>Challenges:</b>
+		Reading the image pixels and checking if positions are similar enough was the easy part. Making it perform in an acceptable speed was way, way harder. The bigger the image, the slower it gets. That said, it should run just fine with anything smaller than 2000x2000. It was fun, tho!
+	</div>
+
+	<div class='intro'>
+		<b>Technologies:</b>
+		Nothing fancy, just HTML5 canvas and typescript. All the code/logic (except for the <a target='_blank' href='https://github.com/antimatter15/rgb-lab'>comparing rgb</a> bit) was thought and developed on the last hours specifically for this test.
+	</div>
+
+	<div id='loading' class='block'>
+		Loading tool...
+	</div>
+
+	<div id='header' class='block hidden'>
+		<input id='source2d' type='file' accept="image/png, image/jpeg">
+	</div>
+
+	<div id='control' class='block hidden'>
+		<div class='control'>
+			<label>Tolerance:</label>
+			<div class='slider'>
+		  		<input id="tolerance" type="range" min="0" max="100" value="2" step="0.1"> <span class='tolerance'>100%</span>
+			</div>
+		</div>
+	</div>
+
+	<div id='content' class='block hidden'>
+		<div class='help'></div>
+		<canvas id='canvas2d' width=1 height=1 ></canvas>
+	</div>
+
+</body>
+</html>
